@@ -1,8 +1,7 @@
 import { ThrowStmt } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { subscribeOn } from 'rxjs/operators';
 import { ICurrentTvShow } from '../icurrent-tv-show';
-import { TvshowService } from '../tvshow.service';
 
 @Component({
   selector: 'app-current-inf-tvshow',
@@ -10,9 +9,9 @@ import { TvshowService } from '../tvshow.service';
   styleUrls: ['./current-inf-tvshow.component.css']
 })
 export class CurrentInfTvshowComponent implements OnInit {
-  current: ICurrentTvShow
+  @Input() current: ICurrentTvShow
 
-  constructor(private tvshowService: TvshowService) {
+  constructor() {
     // this.current = {
     //   name: '',
     //   country: '',
@@ -29,7 +28,7 @@ export class CurrentInfTvshowComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.tvshowService.getCurrentTvShow('Kenan').subscribe(data => this.current = data);
+    
   }
 
 }

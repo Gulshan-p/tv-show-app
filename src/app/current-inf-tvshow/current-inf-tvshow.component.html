@@ -1,0 +1,35 @@
+<div *ngIf="current" class="content-inf">
+  <div class="content-inf_main">
+    <div>{{current.name}}</div>    
+  </div>
+  <div class="content-inf_description">
+    <div class="content-inf_image">
+      <img src ={{current.image}} alt="">
+    </div>
+    <div class="content-inf_content">
+      <div class ='content-inf_item'>
+        <div class ='content_name'>Network</div>
+        <div>{{current.premiered | date:'mediumDate'}}</div></div>
+      <div class ='content-inf_item'>
+        <div class ='content_name'>Country</div>
+        <div>{{current.country}}</div></div>
+      <div class ='content-inf_item'>
+        <div class ='content_name'>Genres</div>
+        <div>{{current.genres.join(', ')}}</div></div>
+      <div class ='content-inf_item'>
+        <div class ='content_name'>Language</div>
+        <div>{{current.language}}</div></div>
+      <div class ='content-inf_item'>
+        <div class ='content_name'>Status</div>
+        <div>{{current.status}}</div></div> 
+    </div>
+    <div class="content-inf_stars">
+      <span>{{current.rating}}</span>
+      <span>{{current.weight}}</span>
+      <div class ='content_name'>rating</div>
+    </div>
+  </div>
+  <div class="content-inf_text" innerHTML= {{current?.summary}}></div>
+</div>
+
+

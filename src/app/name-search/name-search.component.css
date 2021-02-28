@@ -1,0 +1,15 @@
+form {
+  text-align: right;
+}
+mat-form-field{
+  width: 40%;
+  margin-right: 15px;
+}
+mat-label {
+  color: white;
+}
+
+.material-icons, mat-label { color: rgba(255, 255, 255, 0.7); }
+
+
+ 

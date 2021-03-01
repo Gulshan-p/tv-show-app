@@ -29,7 +29,7 @@ export class CurrentInfTvshowComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.tvshowService.getCurrentTvShow('Kenan').subscribe(data => this.current = data);
+    this.tvshowService.getCurrentTvShow('kenan').subscribe(data => this.current = data);
   }
 
 }

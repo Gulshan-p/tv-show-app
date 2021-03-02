@@ -22,13 +22,16 @@ h1 {
 
 }
 .main-content {
-  margin: 40px auto ;
+  margin: 40px auto;
+  padding-bottom: 1px;
   background: #3498a6;
   width: 80%;
   border-radius: 5px;
   box-shadow: 5px 5px 5px -5px rgba(240, 245, 248, 0.6) inset;
-  padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
+}
+footer {
+  height: 40px;
 }
  

@@ -1,5 +1,5 @@
 export interface ICurrentTvShowData {
- 
+  show: {
     name: string,
     language: string,
     genres: string[],
@@ -19,7 +19,7 @@ export interface ICurrentTvShowData {
     },
     summary: string
   }
-
+}
 
 
 //     show:  Show;

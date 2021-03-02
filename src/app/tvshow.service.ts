@@ -19,6 +19,7 @@ export class TvshowService {
         uriParams = `q=${search}`
       }
 
+
      return this.httpClient.get<ICurrentTvShowData[]>(`http://api.tvmaze.com/search/shows?q=${search}`).pipe(
       map(data => data.map(d => this.transformToIcurrentTvShow(d))
       ))
@@ -36,6 +37,7 @@ export class TvshowService {
     image: data.show.image?.medium,
     premiered: data.show.premiered,
     status: data.show.status
+
     }
   }
 }

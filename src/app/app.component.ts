@@ -8,17 +8,20 @@ import { TvshowService } from './tvshow.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'local-tvshow-app';
-  
+ 
+  title = 'tvshow-app';
   // currentTvShow: ICurrentTvShow;
   shows: ICurrentTvShow[];
 
   constructor(private tvShowService: TvshowService) {}
+
   doSearch(searchValue) {
     if (searchValue) {
       const userInput = searchValue;
       this.tvShowService.getCurrentTvShow(
+
         userInput.length > 1 ? userInput : undefined).subscribe(data =>this.shows = data)
     }
+
   }
 }

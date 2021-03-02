@@ -19,22 +19,20 @@ export class TvshowService {
         uriParams = `q=${search}`
       }
 
-     return this.httpClient.get<ICurrentTvShowData>(`http://api.tvmaze.com/singlesearch/shows?q=${search}`).pipe(
-      //  map(data => this.transformToIcurrentTvShow(data))
-      map(data => this.transformToIcurrentTvShow(data))
+     return this.httpClient.get<ICurrentTvShowData>(`http://api.tvmaze.com/singlesearch/shows?q=${search}`)
+     .pipe(map(data => this.transformToIcurrentTvShow(data))
      )
-   
-  }
+    }
   private transformToIcurrentTvShow(data: ICurrentTvShowData): ICurrentTvShow {
     return {
     name: data.name,
-    country: data.network.country.name,
+    country: data.network?.country?.name,
     language: data.language,
     genres: data.genres,
-    rating: data.rating.average,
+    rating: data.rating?.average,
     weight: data.weight,
     summary: data.summary,
-    image: data.image.medium,
+    image: data.image?.medium,
     premiered: data.premiered,
     status: data.status
     }

@@ -3,7 +3,7 @@
     TV Show
   </h1>
   <div>
-    <app-name-search></app-name-search>
-    <app-current-inf-tvshow></app-current-inf-tvshow>
+    <app-name-search (searchEvent)="doSearch($event)"></app-name-search>
+    <app-current-inf-tvshow [current]="currentTvShow"></app-current-inf-tvshow>
   </div>
 </div>

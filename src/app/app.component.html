@@ -4,6 +4,7 @@
   </h1>
   <div>
     <app-name-search (searchEvent)="doSearch($event)"></app-name-search>
+
     <app-current-inf-tvshow 
     *ngFor = "let show of shows"
     [current] = "show"

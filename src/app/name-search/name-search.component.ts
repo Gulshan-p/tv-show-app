@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators  } from '@angular/forms';
 import { TvshowService } from '../tvshow.service';
 import {debounce, debounceTime} from 'rxjs/operators';
 @Component({
@@ -12,7 +12,8 @@ export class NameSearchComponent implements OnInit {
   search = new FormControl('', Validators.minLength(3));
   constructor() { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+
     this.search.valueChanges
     .pipe(debounceTime(1000))
     .subscribe((searchValue: string) => {

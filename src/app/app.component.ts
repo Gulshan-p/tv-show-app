@@ -9,7 +9,7 @@ import { TvshowService } from './tvshow.service';
 })
 export class AppComponent {
  
-  title = 'tvshow-app';
+  title = 'local-tvshow-app';
   // currentTvShow: ICurrentTvShow;
   shows: ICurrentTvShow[];
 

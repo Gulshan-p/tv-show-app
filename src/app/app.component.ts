@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ICurrentTvShow } from './icurrent-tv-show';
 import { TvshowService } from './tvshow.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

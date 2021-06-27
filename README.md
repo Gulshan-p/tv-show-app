@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
+## Features:
+1. Fetch and display the information of tv-shows from TVmaze.com 
+2. Used TVmaze's API to fetch the tv-show data.
+3. Display all shows that matches to the given string in the search box.
+
+
 <image src = "image\tvshowimage.png">
 
 ## Development server
